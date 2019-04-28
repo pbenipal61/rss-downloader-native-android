@@ -1,6 +1,7 @@
 package com.postmaninteractive.fromrssdownloader;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,12 +34,13 @@ public class FeedAdapter extends ArrayAdapter {
     public View getView(int position, View convertView,ViewGroup parent) {
         ViewHolder viewHolder;
         if(convertView == null){
+            Log.d(TAG, "getView: called with null convertview");
             convertView = layoutInflater.inflate(layoutResource,parent,false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
 
         }else{
-
+            Log.d(TAG, "getView: provided with convertview");
             viewHolder = (ViewHolder) convertView.getTag();
         }
 //         TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
