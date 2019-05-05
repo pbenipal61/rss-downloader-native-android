@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ListView listApps;
     private String feedUrl = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=%d/xml";
-    private int feedLimit = 10;
+    private int feedLimit = 11;
     private String feedCachedUrl = "INVALIDATED";
     public static final String STATE_URL = "feedUrl";
     public static final String STATE_LIMIT = "feedLimit";
